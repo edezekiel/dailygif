@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def index
+    @users = User.all
   end
 
   def new
@@ -9,6 +10,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
+    @gifs = Gif.all
   end
 
   def edit
@@ -19,4 +22,6 @@ class UsersController < ApplicationController
 
   def delete
   end
+
+
 end

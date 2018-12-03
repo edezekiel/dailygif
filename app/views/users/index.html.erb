@@ -1,0 +1,7 @@
+<h1>Gif Wizards:</h1>
+
+<ul>
+  <% @users.each do |user| %>
+    <h3><li><%= link_to user.username.titleize, user_path(user) %></li></h3>
+  <% end %>
+</ul>

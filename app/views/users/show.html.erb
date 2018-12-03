@@ -1,0 +1,9 @@
+<h1>
+  <%= @user.username.titleize %>'s Profile Page
+</h1>
+
+<h2>Your Gifs:</h2>
+<% @user.gifs.each do |gif| %>
+  <h3><%= link_to gif.name, gif_path(gif) %></h3>
+  <img src="<%= gif.giflink %>" alt="">
+<% end %>
