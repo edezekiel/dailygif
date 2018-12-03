@@ -1,0 +1,2 @@
+class GifTagsController < ApplicationController
+end
