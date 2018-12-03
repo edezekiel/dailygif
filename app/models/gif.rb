@@ -1,7 +1,6 @@
 class Gif < ApplicationRecord
   belongs_to :category
-  has_many :usergifs
-  has_many :users, through: :usergifs
+  belongs_to :user
   has_many :giftags
   has_many :tags, through: :giftags
 end
