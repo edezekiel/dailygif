@@ -1,0 +1,12 @@
+<h1>Become a Gif Wizard:</h1>
+
+<%= form_for @gif do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :giflink, "Paste Gif Source Link Here:" %>
+  <%= f.text_field :giflink %>
+  <%= f.label :category_id %>
+  <%= f.collection_select :category_id, @categories, :id, :name %>
+  <%= f.submit %>
+
+<% end %>
