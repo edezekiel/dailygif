@@ -1,4 +1,5 @@
 class GifsController < ApplicationController
+  #TODO - add before_action authorize for create
 
   def index
     @gifs = Gif.all
@@ -10,7 +11,7 @@ class GifsController < ApplicationController
   end
 
   def create
-    @gif = Gif.new
+    @gif = current_user.gifs.build(gif_params)
   end
 
   def show
@@ -24,5 +25,9 @@ class GifsController < ApplicationController
   end
 
   def delete
+  end
+
+  def gif_params
+
   end
 end
