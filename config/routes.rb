@@ -1,11 +1,18 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  
-  root :to => "gifs#index"
-  
+
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  post '/logout' => 'sessions#destroy'
+
+  resources :users, only: [:new, :create]
+
+  root 'welcome#home'
+
+  # root :to => "gifs#index"
+
   resources :gifs
   resources :users
-  resources :categories 
-  resources :tags 
+  resources :categories
+  resources :tags
 
 end

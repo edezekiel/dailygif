@@ -7,19 +7,19 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Users:
-bob = User.create(username: "bob", email: "bobsmith@gmail.com", password: "password" )
+bob = User.create(username: "bob", password: "password" )
 
-busan = User.create(username: 'susan', email: 'susansmith@gmail.com', password: "password" )
+busan = User.create(username: 'susan', password: "password" )
 
-mary = User.create(username: 'mary', email: 'marysmith@gmail.com', password: "password" )
+mary = User.create(username: 'mary', password: "password" )
 
-holt = User.create(username: 'holt', email: 'holtsmith@gmail.com', password: "password" )
+holt = User.create(username: 'holt', password: "password" )
 
-james = User.create(username: 'james', email: 'jamessmith@gmail.com', password: "password" )
+james = User.create(username: 'james', password: "password" )
 
-terry = User.create(username: 'terry', email: 'terrysmith@gmail.com', password: "password" )
+terry = User.create(username: 'terry', password: "password" )
 
-# Categories: 
+# Categories:
 actions = Category.create(name: 'action')
 animals = Category.create(name: 'animals')
 holidays = Category.create(name: 'holidays')
@@ -36,12 +36,12 @@ gnomes = Gif.create(name: 'Sherlock Gnomes', giflink: 'https://media.giphy.com/m
 love = Gif.create(name: 'All of My Love', giflink: 'https://media.giphy.com/media/l4pTdcifPZLpDjL1e/giphy.gif', user_id: holt.id, category_id: animals.id)
 
 kiss = Gif.create(name: 'New Years Kiss', giflink: 'https://media.giphy.com/media/xUOxeQIWmtqQ04TjWw/giphy.gif', user_id: james.id, category_id: holidays.id)
-	
+
 miss = Gif.create(name: 'Miss U', giflink: 'https://media.giphy.com/media/l1J9GKj09uu8RtCes/giphy.gif', user_id: busan.id, category_id: emotions.id)
 
 adopt = Gif.create(name: 'Adopt Make it Rain', giflink: 'https://media.giphy.com/media/3o7aCXMtmzXxu04JH2/giphy.gif', user_id: mary.id, category_id: food.id)
 
-birthday = Gif.create(name: 'Happy Birthday', giflink: 'https://media.giphy.com/media/3ohs7W7ACsSvyY5WoM/giphy.gif', user_id: james.id, category_id: reactions.id) 
+birthday = Gif.create(name: 'Happy Birthday', giflink: 'https://media.giphy.com/media/3ohs7W7ACsSvyY5WoM/giphy.gif', user_id: james.id, category_id: reactions.id)
 
 hopkins = Gif.create(name: 'Deandre Hopkins', giflink: 'https://media.giphy.com/media/l49JZ1z6MW5Qt3fGw/giphy.gif', user_id: terry.id, category_id: sports.id)
 
@@ -65,4 +65,4 @@ applause = Gif.create(name: 'Reggie Watts Applause', giflink: 'https://media.gip
 
 # huh = Gif.create(name: 'Huh!', giflink: 'https://media.giphy.com/media/fpXxIjftmkk9y/giphy.gif')
 
-# ah.user = bob 
+# ah.user = bob
