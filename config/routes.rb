@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   root :to => "gifs#index"
 
   resources :gifs
-  resources :users
+  resources :users, except: :show
   resources :categories
   resources :tags
 

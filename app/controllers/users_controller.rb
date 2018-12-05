@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 
     session[:user_id] = @user.id
 
-    redirect_to controller: 'welcome', action: 'home'
+    redirect_to controller: 'welcome', action: 'profile'
   end
 
   def show

@@ -14,7 +14,7 @@ class GifsController < ApplicationController
   def create
     @gif = current_user.gifs.build(gif_params)
     @gif.save
-    redirect_to controller: 'welcome', action: 'home'
+    redirect_to controller: 'welcome', action: 'profile'
   end
 
   def show
