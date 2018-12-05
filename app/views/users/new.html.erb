@@ -1,14 +1,20 @@
 <h1>Sign Up</h1>
 
-<%= form_for @user, controller: 'user', action: 'create' do |f| %>
+<%= form_for @user, :html => {:class => "ui form"}, controller: 'user', action: 'create' do |f| %>
+  <div class="field">
   <%= f.label :username %>
   <%= f.text_field :username %>
+  </div>
 
+  <div class="field">
   <%= f.label :password %>
   <%= f.password_field :password %>
+  </div>
 
+  <div class="field">
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %>
+  </div>
 
-  <%= f.submit "create" %>
+  <%= f.submit class: 'ui button', value: "create" %>
 <% end %>

@@ -1,9 +1,5 @@
 <h1>Feed</h1>
 
-<button class="ui primary button">
-  Follow
-</button>
-
 <% @gifs.each do |gif| %>
   <h3><%= link_to gif.name, gif_path(gif) %></h3>
   <%= link_to(gif) do %>
