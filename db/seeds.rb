@@ -31,7 +31,6 @@ science = Category.create(name: 'science')
 
 
 # Gifs:
-gnomes = Gif.create(name: 'Sherlock Gnomes', giflink: 'https://media.giphy.com/media/l4pTfx2qLszoacZRS/giphy.gif', user_id: bob.id, category_id: actions.id)
 
 love = Gif.create(name: 'All of My Love', giflink: 'https://media.giphy.com/media/l4pTdcifPZLpDjL1e/giphy.gif', user_id: holt.id, category_id: animals.id)
 
@@ -49,7 +48,7 @@ shrug = Gif.create(name: 'Shrug', giflink: 'https://media.giphy.com/media/5t5I8b
 
 applause = Gif.create(name: 'Reggie Watts Applause', giflink: 'https://media.giphy.com/media/3ojujSzy9u9MTLAbeG/giphy.gif', user_id: terry.id, category_id: holidays.id)
 
-# dunked_on = Gif.create(name: 'Dunked On!', giflink: 'https://media.giphy.com/media/l0OWiMGpoC6apZFXG/giphy.gif')
+dunked_on = Gif.create(name: 'Dunked On!', giflink: 'https://media.giphy.com/media/l0OWiMGpoC6apZFXG/giphy.gif', user_id: bob.id, category_id: actions.id)
 
 # really = Gif.create(name: 'Really!!', giflink: 'https://media.giphy.com/media/3o6YglDndxKdCNw7q8/giphy.gif')
 
