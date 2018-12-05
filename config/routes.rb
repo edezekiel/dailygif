@@ -5,13 +5,12 @@ Rails.application.routes.draw do
   post '/logout' => 'sessions#destroy'
 
   resources :users, only: [:new, :create, :show, :index]
+  resources :gifs, only: [:new, :create, :show, :index]
+  resources :categories, only: [:index, :show]
 
   get '/profile' => 'welcome#profile'
 
   root :to => "gifs#index"
 
-  resources :gifs
-  resources :categories
-  resources :tags
 
 end

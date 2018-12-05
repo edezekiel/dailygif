@@ -1,6 +1,8 @@
-<h1>Feed</h1>
+<h1>
+  <%= @category.name.titleize %>
+</h1>
 
-<% @gifs.each do |gif| %>
+<% @category.gifs.each do |gif| %>
   <h3><%= link_to gif.name, gif_path(gif) %></h3>
   <%= link_to(gif) do %>
     <img src="<%= gif.giflink %>" alt="">

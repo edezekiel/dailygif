@@ -1,3 +1,5 @@
 <h1><%= @gif.name.titleize %></h1>
 <h2>Gif Creator: <%= link_to @gif.user.username.titleize, user_path(@gif.user) %></h2>
-<img src="<%= @gif.giflink %>" alt="">
+<%= link_to(@gif) do %>
+  <img src="<%= @gif.giflink %>" alt="">
+<% end %>

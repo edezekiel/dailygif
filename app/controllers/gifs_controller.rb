@@ -21,15 +21,6 @@ class GifsController < ApplicationController
     @gif = Gif.find(params[:id])
   end
 
-  def edit
-  end
-
-  def update
-  end
-
-  def delete
-  end
-
   def gif_params
     params.require(:gif).permit(:name, :giflink, :category_id)
   end

@@ -1,23 +1,10 @@
 class CategoriesController < ApplicationController
   def index
-  end
-
-  def new
-  end
-
-  def create
+    @categories = Category.all
   end
 
   def show
+    @category = Category.find(params[:id])
+    @gifs = Gif.all
   end
-
-  def edit
-  end
-
-  def update
-  end
-
-  def delete
-  end
-
 end
