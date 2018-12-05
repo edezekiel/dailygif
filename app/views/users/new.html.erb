@@ -1,20 +1,24 @@
-<h1>Sign Up</h1>
 
-<%= form_for @user, :html => {:class => "ui form"}, controller: 'user', action: 'create' do |f| %>
-  <div class="field">
-  <%= f.label :username %>
-  <%= f.text_field :username %>
+<div class="ui middle aligned center aligned grid">
+  <div class="six wide column left aligned">
+    <h1 class="ui blue header">Sign Up</h1>
+      <%= form_for @user, :html => {:class => "ui form"}, controller: 'user', action: 'create' do |f| %>
+        <div class="field">
+          <%= f.label :username %>
+          <%= f.text_field :username %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password %>
+          <%= f.password_field :password %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation %>
+        </div>
+
+      <%= f.submit class: 'ui button', value: "create" %>
+      <% end %>
   </div>
-
-  <div class="field">
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  </div>
-
-  <div class="field">
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
-  </div>
-
-  <%= f.submit class: 'ui button', value: "create" %>
-<% end %>
+</div>
