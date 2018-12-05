@@ -6,9 +6,9 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create]
 
-  root 'welcome#home'
+  get '/home' => 'welcome#home'
 
-  # root :to => "gifs#index"
+  root :to => "gifs#index"
 
   resources :gifs
   resources :users
