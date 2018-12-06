@@ -13,7 +13,7 @@
   <body>
 
     <div class="ui fixed menu">
-      <%= link_to 'Daily Gif', root_path, {:class => "item"} %>
+      <%= link_to 'Daily Gif', gifs_path, {:class => "item"} %>
       <%= link_to 'Categories', categories_path, {:class => "item"} %>
       <% if current_user %>
         <%= link_to "Community", users_path, {:class => "item"} %>
@@ -31,7 +31,7 @@
     </div>
 
       <div id="main" class="ui middle aligned grid"
-      style="min-height: 90%; 
+      style="min-height: 90%;
         background:
           url(https://media.giphy.com/media/uhjMrFHxxUWvC/giphy.gif)
           no-repeat center center fixed;
