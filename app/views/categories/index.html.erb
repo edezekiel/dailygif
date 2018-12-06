@@ -3,14 +3,15 @@
 <div class="ui link cards">
   <% @categories.each do |category| %>
 
-  <div class="card">
+  <a class="ui card" href="<%= category_path(category) %>">
+    <div class="content">
+      <div class="header"><%= category.name.titleize %></div>
+    </div>
+
     <div class="image">
         <img src="<%= category.gifs.first.giflink %>">
     </div>
-    <div class="content">
-      <div class="header"><%= link_to category.name.titleize, category_path(category) %></div>
-    </div>
-  </div>
+  </a>
 
   <% end %>
 </div>

@@ -3,15 +3,15 @@
 <div class="ui link cards">
   <% @users.each do |user| %>
 
-  <div class="card">
+  <a class="ui card" href="<%= user_path(user) %>">
     <div class="content">
-      <div class="header"><%= link_to user.username.titleize, user_path(user) %></div>
+      <div class="header"><%= user.username.titleize %></div>
     </div>
 
     <div class="image">
         <img src="<%= user.gifs.first.giflink %>">
     </div>
-  </div>
+  </a>
 
   <% end %>
 </div>

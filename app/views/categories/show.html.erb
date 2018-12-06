@@ -5,14 +5,14 @@
 <div class="ui link cards">
   <% @category.gifs.each do |gif| %>
 
-  <div class="card">
+  <a class="ui card" href="<%= gif_path(gif) %>">
     <div class="image">
         <img src="<%= gif.giflink %>">
     </div>
     <div class="content">
-      <div class="header"><%= link_to gif.name, gif_path(gif) %></div>
+      <div class="header"><%= gif.name %></div>
     </div>
-  </div>
+  </a>
 
   <% end %>
 </div>

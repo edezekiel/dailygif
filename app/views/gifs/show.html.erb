@@ -1,11 +1,11 @@
 <h1><%= @gif.name.titleize %></h1>
 
 <div class="ui link cards">
-  <div class="card">
+  <a class="ui card" href="<%= user_path(@gif.user) %>">
 
     <div class="content">
       <div class="header">
-        <h2>Gif Creator: <%= link_to @gif.user.username.titleize, user_path(@gif.user) %></h2>
+        <h2>Gif Creator: <%= @gif.user.username.titleize %></h2>
       </div>
     </div>
 
@@ -13,5 +13,5 @@
         <img src="<%= @gif.giflink %>">
     </div>
 
-  </div>
+  </a>
 </div>
