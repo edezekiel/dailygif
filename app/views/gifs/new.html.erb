@@ -9,7 +9,7 @@
         </div>
 
         <div class="field">
-          <%= f.label :giflink, "Paste Gif Source Link Here:" %>
+          <%= f.label :giflink, "Paste \"Gif Link\" From #{link_to("Giphy", 'http://www.giphy.com', target: "_blank", rel: "nofollow")}".html_safe%>
           <%= f.text_field :giflink %>
         </div>
 
