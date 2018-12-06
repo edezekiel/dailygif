@@ -1,6 +1,5 @@
 <h1>Feed</h1>
 
-
 <div class="ui link cards">
   <% @gifs.each do |gif| %>
 
@@ -12,5 +11,6 @@
       <div class="header"><%= link_to gif.name, gif_path(gif) %></div>
     </div>
   </div>
+
   <% end %>
 </div>

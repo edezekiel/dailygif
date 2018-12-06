@@ -1,23 +1,23 @@
 <div class="ui middle aligned center aligned grid">
   <div class="six wide column left aligned">
     <h1 class="ui blue header">Become a Gif Wizard:</h1>
-<%= form_for @gif, :html => {:class => "ui form"} do |f| %>
-  <div class="field">
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  </div>
+      <%= form_for @gif, :html => {:class => "ui form"} do |f| %>
+        <div class="field">
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+        </div>
 
-  <div class="field">
-  <%= f.label :giflink, "Paste Gif Source Link Here:" %>
-  <%= f.text_field :giflink %>
-  </div>
+        <div class="field">
+          <%= f.label :giflink, "Paste Gif Source Link Here:" %>
+          <%= f.text_field :giflink %>
+        </div>
 
-  <div class="field">
-  <%= f.label :category_id %>
-  <%= f.collection_select :category_id, @categories, :id, :name, {}, {class: "ui dropdown"} %>
-  </div>
+        <div class="field">
+          <%= f.label :category_id %>
+          <%= f.collection_select :category_id, @categories, :id, :name, {}, {class: "ui dropdown"} %>
+        </div>
 
-  <%= f.submit class: 'ui button'%>
-<% end %>
-</div>
+        <%= f.submit class: 'ui button'%>
+      <% end %>
+  </div>
 </div>

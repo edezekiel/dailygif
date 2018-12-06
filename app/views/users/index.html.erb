@@ -1,7 +1,17 @@
 <h1>Gif Wizards:</h1>
 
-<ul>
+<div class="ui link cards">
   <% @users.each do |user| %>
-    <h3><li><%= link_to user.username.titleize, user_path(user) %></li></h3>
+
+  <div class="card">
+    <div class="content">
+      <div class="header"><%= link_to user.username.titleize, user_path(user) %></div>
+    </div>
+
+    <div class="image">
+        <img src="<%= user.gifs.first.giflink %>">
+    </div>
+  </div>
+
   <% end %>
-</ul>
+</div>
