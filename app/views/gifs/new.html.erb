@@ -3,14 +3,15 @@
     <div class="ui padded segment">
     <h1 class="ui blue header">Become a Gif Wizard:</h1>
       <%= form_for @gif, :html => {:class => "ui form"} do |f| %>
-        <div class="field">
-          <%= f.label :name %>
-          <%= f.text_field :name %>
-        </div>
 
         <div class="field">
           <%= f.label :giflink, "Paste \"Gif Link\" From #{link_to("Giphy", 'http://www.giphy.com', target: "_blank", rel: "nofollow")}".html_safe%>
           <%= f.text_field :giflink %>
+        </div>
+
+        <div class="field">
+          <%= f.label :name %>
+          <%= f.text_field :name %>
         </div>
 
         <div class="field">
