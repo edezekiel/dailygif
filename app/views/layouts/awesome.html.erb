@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DailyGif</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+
+    <div class="ui fixed menu">
+      <%= link_to 'Daily Gif', root_path, {:class => "item"} %>
+      <%= link_to 'Categories', categories_path, {:class => "item"} %>
+      <% if current_user %>
+        <%= link_to "Community", users_path, {:class => "item"} %>
+        <%= link_to "Profile", profile_path, {:class => "item"} %>
+        <%= link_to "Create a New Gif", new_gif_path, {:class => "item"} %>
+        <div class="right menu">
+            <%= link_to "Logout", logout_path, {:class => "item", :method => :destroy} %>
+        </div>
+      <% else %>
+        <div class="right menu">
+          <%= link_to "Login", login_path, {:class => "item"} %>
+          <%= link_to "Signup", new_user_path, {:class => "item"} %>
+        </div>
+      <% end %>
+    </div>
+
+      <div id="main" class="ui middle aligned grid"
+      style="min-height: 90%; 
+        background:
+          url(https://media.giphy.com/media/uhjMrFHxxUWvC/giphy.gif)
+          no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+        background-size: cover;">
+        <div class="twelve wide column centered">
+          <%= yield %>
+        </div>
+      </div>
+
+
+      <footer class="ui footer segment" style="bottom: 0; width: 100%; border-bottom: none; box-shadow: none;">
+        <div class="ui center aligned container">
+
+          <div class="ui blue header">
+            Made with ❤️  by Ed and Kaeland
+          </div>
+
+        </div>
+      </footer>
+
+  </body>
+</html>
