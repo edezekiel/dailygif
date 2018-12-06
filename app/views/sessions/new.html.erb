@@ -1,21 +1,23 @@
 
 <div class="ui middle aligned center aligned grid">
-  <div class="eight wide column left aligned">
+  <div class="ten wide column left aligned">
+    <div class="ui padded segment">
       <h1 class="ui blue header">Login</h1>
       <%= form_for @user, :html => {:class => "ui large form"}, url: login_path, method: :post do |f| %>
 
-        <div class="field">
-          <%= f.label :username %>
-          <%= f.text_field :username %>
-        </div>
+          <div class="field">
+            <%= f.label :username %>
+            <%= f.text_field :username %>
+          </div>
 
-        <div class="field">
-          <%= f.label :password %>
-          <%= f.password_field :password %>
-        </div>
+          <div class="field">
+            <%= f.label :password %>
+            <%= f.password_field :password %>
+          </div>
 
-        <%= f.submit class: 'ui button', value: "log in" %>
-        Or <%= link_to(controller: 'users', action: 'new') { 'sign up' } %>
+          <%= f.submit class: 'ui button primary', value: "log in" %>
+          Or <%= link_to(controller: 'users', action: 'new') { 'sign up' } %>
       <% end %>
+      </div>
   </div>
 </div>

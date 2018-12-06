@@ -1,6 +1,7 @@
 
 <div class="ui middle aligned center aligned grid">
-  <div class="six wide column left aligned">
+  <div class="ten wide column left aligned">
+    <div class="ui padded segment">
     <h1 class="ui blue header">Sign Up</h1>
       <%= form_for @user, :html => {:class => "ui form"}, controller: 'user', action: 'create' do |f| %>
         <div class="field">
@@ -18,7 +19,8 @@
           <%= f.password_field :password_confirmation %>
         </div>
 
-      <%= f.submit class: 'ui button', value: "create" %>
+      <%= f.submit class: 'ui button primary', value: "Create" %>
       <% end %>
+    </div>
   </div>
 </div>
