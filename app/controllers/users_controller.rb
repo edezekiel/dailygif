@@ -20,8 +20,11 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @gifs = Gif.all
-    if current_user.username == @user.username
-      redirect_to controller: 'welcome', action: 'profile'
+
+    if current_user
+      if current_user.username == @user.username
+        redirect_to controller: 'welcome', action: 'profile'
+      end
     end
   end
 
