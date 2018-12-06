@@ -3,14 +3,13 @@
 
 <div class="ui link cards">
   <% @gifs.each do |gif| %>
+
   <div class="card">
     <div class="image">
         <img src="<%= gif.giflink %>">
     </div>
     <div class="content">
-      <div class="header">
-          <%= link_to gif.name, gif_path(gif) %>
-      </div>
+      <div class="header"><%= link_to gif.name, gif_path(gif) %></div>
     </div>
   </div>
   <% end %>
