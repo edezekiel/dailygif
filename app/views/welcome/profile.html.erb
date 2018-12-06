@@ -1,8 +1,8 @@
-<h1>
+<h1 class="ui blue header">
   <%= @user.username.titleize %>'s Profile Page
 </h1>
 
-<h2>My Gifs:</h2>
+<h2 class="ui blue header">My Gifs:</h2>
 
 <div class="ui link cards">
   <% @user.gifs.each do |gif| %>
@@ -16,6 +16,6 @@
         <img src="<%= gif.giflink %>">
     </div>
   </a>
-  
+
   <% end %>
 </div>
